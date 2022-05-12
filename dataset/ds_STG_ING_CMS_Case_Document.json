@@ -1,0 +1,102 @@
+{
+	"name": "ds_STG_ING_CMS_Case_Document",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ ConnectToMainStgIn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Case_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Document_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Version_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Version_Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Doc_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Doc_Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Doc_Description",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Version_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Modified_Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Modify_By",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Doc_stage",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Escriba_Doc_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Gdd_Deals_ID_main",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Gdd_Deals_all",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DocuSign_EnvelopeStatus",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Is_Last",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Ingestion_loading_date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STG_loading_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "RUN_ID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "STG_checksum",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "STG",
+			"table": "ING_CMS_Case_Document"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

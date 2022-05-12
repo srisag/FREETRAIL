@@ -1,0 +1,9 @@
+{
+	"name": "CMSadfactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ab33c511-0947-4c6d-bdeb-428176e32391",
+		"tenantId": "dfc20fb3-449a-479d-9c57-9aa90e859008"
+	}
+}

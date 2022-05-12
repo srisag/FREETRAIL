@@ -1,0 +1,117 @@
+{
+	"name": "ds_CMSCaseDetailData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ConnecttoBlob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file_name": {
+				"type": "string",
+				"defaultValue": "2022/05/2022-05-04_CMSCaseDetailData.json"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().p_file_name",
+					"type": "Expression"
+				},
+				"folderPath": "CMS/CMSCaseDetailData/",
+				"container": "cmsdeatil"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"cmsCaseDocList": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"caseId": {
+								"type": "string"
+							},
+							"cmsDocuments": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"documentId": {
+											"type": "string"
+										},
+										"documentName": {
+											"type": "string"
+										},
+										"documentCategory": {
+											"type": "string"
+										},
+										"description": {
+											"type": "string"
+										},
+										"stage": {
+											"type": "string"
+										},
+										"cmsDocumentVersions": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"versionId": {
+														"type": "string"
+													},
+													"modifiedBy": {
+														"type": "string"
+													},
+													"dateModified": {
+														"type": "string"
+													},
+													"versionNumber": {
+														"type": "string"
+													},
+													"versionName": {
+														"type": "string"
+													},
+													"modifiedByUserId": {
+														"type": "string"
+													},
+													"escribaDocId": {
+														"type": "null"
+													},
+													"envelopeStatus": {
+														"type": "string"
+													},
+													"gddMetadata": {
+														"type": "array",
+														"items": {
+															"type": "object",
+															"properties": {
+																"dealID": {
+																	"type": "string"
+																},
+																"dealStatus": {
+																	"type": "string"
+																},
+																"dealVersion": {
+																	"type": "string"
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
